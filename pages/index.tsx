@@ -24,10 +24,10 @@ export default function Home() {
         </Flip>
         <Fade bottom>
           <div className="">
-            <h1 className="w-9/12 pl-10 mx-20 my-6 text-3xl font-bold border-b-2 border-black md:w-10/12">
+            <h1 className="w-full my-6 text-3xl font-bold text-center border-b-2 border-black md:w-11/12 md:mx-20">
               About us
             </h1>
-            <p className="my-10 text-xl font-medium mx-14 md:mx-28 ">
+            <p className="my-10 text-xl font-medium text-justify mx-14 md:mx-28 ">
               The current pandemic has affected the education system all over
               the world. Everyone is learning remotely. It is still all right
               for the senior students but the junior students are the ones who
