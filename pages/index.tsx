@@ -6,6 +6,7 @@ import Fade from "react-reveal/Fade";
 import Flip from "react-reveal/Flip";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import "../i18n"
 export default function Home() {
   return (
     <>
@@ -25,7 +26,7 @@ export default function Home() {
         <Fade bottom>
           <div className="">
             <h1 className="w-full my-6 text-3xl font-bold text-center border-b-2 border-black md:w-11/12 md:mx-20">
-              About us
+              About Us
             </h1>
             <p className="my-10 text-xl font-medium text-justify mx-14 md:mx-28 ">
               The current pandemic has affected the education system all over
