@@ -8,12 +8,12 @@ const Navbar: React.FC<NavBarProps> = () => {
   }
   return (
     <div className='fixed top-0 z-50 w-full'>
-       <nav className="bg-indigo-900 bg-center bg-no-repeat bg-cover ">
-    <div className='flex justify-between p-4 text-white bg-indigo-900'>
+       <nav className="bg-indigo-900 bg-center bg-no-repeat bg-cover">
+    <div className='flex p-4 text-white bg-indigo-900'>
       <Link href='/'>
         <a className='text-xl font-semibold '>shopEcho</a>
       </Link>
-    <div className='hidden space-x-6 font-semibold font-size-xl lg:block '>
+    <div className='hidden mx-auto space-x-6 font-semibold font-size-xl lg:block'>
       <Link href='/'>
         <a className=''>Home</a>
       </Link>
@@ -27,7 +27,7 @@ const Navbar: React.FC<NavBarProps> = () => {
         <a className=''>Contact Us</a>
         </Link>
       </div>
-      <div className='flex flex-col items-center lg:hidden '>
+      <div className='absolute flex flex-col right-3 top-3 lg:hidden '>
         <button onClick={clickHandler}>
         <svg
                   xmlns="http://www.w3.org/2000/svg"
