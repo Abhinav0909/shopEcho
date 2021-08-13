@@ -1,5 +1,5 @@
 export interface SignUpParams{
-  email: string,
+  email: string;
   password: string;
-  confirmPassword:string,
+  confirmPassword: string;
 }
