@@ -4,7 +4,7 @@ let db:Db;
 
 async function intializeClient():Promise<Db> {
   const client = await MongoClient.connect(process.env.MONGODB_URI as string);
-  return client.db('authify');
+  return client.db();
 }
 
 export default async (): Promise<Db> => {
