@@ -16,22 +16,18 @@ const logInHandler = async(req:NextApiRequest,res:NextApiResponse) => {
           message: "Validation error"
         }
       } else {
-        logInController(value).then((val) => {
+        const val = await logInController(value);
           if (val === null) {
-            res.status(203).json({
-              message: 'Login failed',
-            })
+            throw {
+              status:401,
+              message: "Password doesn't match"
+            }
           } else {
             res.status(200).json({
               message: 'Login Succesfull',
               token:val,
             })
           }
-        }).catch((error) => {
-          res.status(error.status || 401).json({
-           message:error.message || 'Password need to be checked',
-         })
-        })
       }
     
     }
