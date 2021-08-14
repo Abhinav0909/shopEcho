@@ -19,21 +19,16 @@ const signUpHandler = async(req: NextApiRequest, res: NextApiResponse) => {
         
       }
       else {
-        signUpController(value).then((val) => {
+        const val = await signUpController(value);
           if (val === true) {
             res.status(201).json({
               message: 'User Created',
             })
           } else {
-            res.status(403).json({
-              message: 'User already exists',
+            res.status(203).json({
+              message:"User already exists",
             })
           }
-        }).catch((error) => {
-          res.status(error.status || 401).json({
-            message:error.message || "You need to confirm your password",
-          })
-        })
       }
     }
     else {
