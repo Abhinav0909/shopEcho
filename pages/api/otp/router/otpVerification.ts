@@ -16,11 +16,11 @@ const verifyOtpHandler = async (req: NextApiRequest, res: NextApiResponse) => {
           message:'Validation Error',
         }
       } else {
-        verificationController(value).then((val) => {
+        const val = await verificationController(value);
           res.status(val.status).json({
             message: val.message,
          })
-        })
+        
       }
     }
   } catch (err) {

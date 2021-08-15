@@ -1,5 +1,3 @@
-import { number } from "joi";
-
 export interface otpParams{
   email: string,
   otp: string,

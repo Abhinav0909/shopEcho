@@ -12,22 +12,21 @@ const otpGenerator = async (req: NextApiRequest, res: NextApiResponse) => {
       if (error) {
         throw {
           status: 422,
-          message:'Validation error',
+          message: 'Validation error',
         }
       }
       else {
-        otpGeneratorController(value.email).then((val) => {
-          if (val === 'Successful') {
-            res.status(201).json({
-              message: val,
-            })  
-          }
-          else {
-            res.status(203).json({
-              message:val,
-            })
-          }
-        })
+        const val = await otpGeneratorController(value.email);
+        if(val === 'Successful')
+          res.status(200).json({
+            message: val,
+          })
+        else {
+          res.status(404).json({
+            message: val,
+          })
+        }
+
       }
     }
   } catch (err) {
