@@ -1,6 +1,8 @@
 import database from "../../common/database";
 import * as bcrypt from 'bcrypt'
 import { SignUpParams } from "../../models/signUp";
+import body from "../../common/mail/body";
+import mail from "../../common/mailgun";
 export const signUpController = async (user: SignUpParams) => {
     const data = await (await database()).collection('customers').find({ email: user.email }).toArray();
   if (data.length === 0) {
@@ -11,6 +13,7 @@ export const signUpController = async (user: SignUpParams) => {
       user.password = hashedPassword;
       user.confirmPassword = hashedConfirmPassword;
       await (await database()).collection('customers').insertOne(user);
+     await mail(user.email,'Account generated',body(user.email))
       return true;
     }
     else {
