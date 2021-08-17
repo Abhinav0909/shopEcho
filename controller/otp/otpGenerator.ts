@@ -1,6 +1,8 @@
 import { ObjectId } from "mongodb";
 import { customAlphabet } from "nanoid";
 import database from "../../common/database";
+import otp from "../../common/mail/otp";
+import mail from "../../common/mailgun";
 interface Data{
   _id:ObjectId
   email:string,
@@ -19,6 +21,7 @@ export const otpGeneratorController = async(email:string) => {
       } 
         const otpCreation = nanoid();
         await (await database()).collection('otp').insertOne({ otp: otpCreation, email: email, expireAt: new Date() })
+        await mail(email,'OTP Request',otp(email,otpCreation));
         return 'Successful';
     }
   } catch(err) {
