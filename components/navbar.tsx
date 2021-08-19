@@ -3,7 +3,7 @@ import Link from 'next/link';
 export interface NavBarProps{}
 const Navbar: React.FC<NavBarProps> = () => {
   const clickHandler = () => {
-    const menu:Element = document.querySelector(".mobile-menu");
+    const menu:Element = document.querySelector(".mobile-menu")!;
     menu.classList.toggle("hidden");
   }
   return (
@@ -20,7 +20,7 @@ const Navbar: React.FC<NavBarProps> = () => {
       <Link href='/Lab'>
         <a className=''>Lab</a>
       </Link>
-      <Link href='/auth'>
+      <Link href='/auth/SignIn'>
         <a className=''>Sign In</a>
         </Link>
         <Link href='/Contact'>
@@ -53,7 +53,7 @@ const Navbar: React.FC<NavBarProps> = () => {
       <Link href='/Lab'>
         <a className='block px-4 py-2 text-base font-semibold text-center text-white border-white'>Lab</a>
       </Link>
-      <Link href='/auth'>
+      <Link href='/auth/SignIn'>
         <a className='block px-4 py-2 text-base font-semibold text-center text-white border-white'>Sign In</a>
         </Link>
         <Link href='/Contact'>
