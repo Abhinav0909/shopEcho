@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:theme =>({
-        'signup':"url('/img/signup.jpg')",
+        "card":"url('/img/Classroom.jpg')",
       })
     },
   },

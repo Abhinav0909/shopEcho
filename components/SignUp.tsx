@@ -1,10 +1,11 @@
+import Link from "next/link";
 import React from "react"
 export interface SignUpProps{
   name: string,
   password: string,
   confirmPassword:string,
 }
-const SignUp:React.FC<SignUpProps> = (props:SignUpProps) => {
+const SignUp:React.FC<SignUpProps> = () => {
   return (
  <div className="font-sans">
             <div className="relative flex flex-col items-center min-h-screen bg-gray-100 sm:justify-center ">
@@ -15,17 +16,17 @@ const SignUp:React.FC<SignUpProps> = (props:SignUpProps) => {
                         <label className="block mt-3 text-sm font-semibold text-center text-gray-700">
                             Sign Up
                         </label>
-                        <form method="#" action="#" className="mt-10">
+                        <form className="mt-10">
                                            
                             <div>
-                                <input type="email" placeholder="Enter your username" className="block w-full mt-1 bg-gray-100 border-none shadow-lg h-11 rounded-xl hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />
+                                <input type="email" placeholder="Enter your email" className="block w-full mt-1 bg-gray-100 border-none shadow-lg h-11 rounded-xl hover:bg-blue-100 focus:bg-blue-100 focus:ring-0 pl-4"required />
                             </div>
                 
                             <div className="mt-7">                
-                                <input type="password" placeholder="Enter your password" className="block w-full mt-1 bg-gray-100 border-none shadow-lg h-11 rounded-xl hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />                           
+                                <input type="password" placeholder="Enter your password" className="block w-full mt-1 bg-gray-100 border-none shadow-lg h-11 rounded-xl hover:bg-blue-100 focus:bg-blue-100 focus:ring-0 pl-4"required />                           
                           </div>
                           <div className="mt-7">                
-                                <input type="password" placeholder="Confirm your password" className="block w-full mt-1 bg-gray-100 border-none shadow-lg h-11 rounded-xl hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />                           
+                                <input type="password" placeholder="Confirm your password" className="block w-full mt-1 bg-gray-100 border-none shadow-lg h-11 rounded-xl hover:bg-blue-100 focus:bg-blue-100 focus:ring-0 pl-4" required/>                           
                             </div>
 
                             <div className="flex mt-7">
@@ -35,16 +36,18 @@ const SignUp:React.FC<SignUpProps> = (props:SignUpProps) => {
                                         Remember Me
                                     </span>
                               </label>
-                              <div className="w-full text-right">     
-                                    <a className="text-sm text-gray-600 underline hover:text-gray-900" href="/SignIn">
+                              <div className="w-full text-right">    
+                              <Link href = 'SignIn'>
+                                    <a className="text-sm text-gray-600 underline hover:text-gray-900" >
                                        Sign In
-                                    </a>                                  
+                                    </a>   
+                                    </Link>                               
                                </div>
                             </div>
                 
                             <div className="mt-7">
                                 <button className="w-full py-3 text-white transition duration-500 ease-in-out transform bg-blue-500 shadow-xl rounded-xl hover:shadow-inner focus:outline-none hover:-translate-x hover:scale-105">
-                                    SignUP
+                                    SignUp
                                 </button>
                             </div>
                 
