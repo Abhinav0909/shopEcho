@@ -1,9 +1,10 @@
+import Link from "next/link";
 import React from "react"
 export interface SignInProps{
   name: string,
   password: string,
 }
-const SignIn:React.FC<SignInProps> = (props:SignInProps) => {
+const SignIn:React.FC<SignInProps> = () => {
   return (
  <div className="font-sans">
             <div className="relative flex flex-col items-center min-h-screen bg-gray-100 sm:justify-center ">
@@ -14,14 +15,14 @@ const SignIn:React.FC<SignInProps> = (props:SignInProps) => {
                         <label className="block mt-3 text-sm font-semibold text-center text-gray-700">
                             Login
                         </label>
-                        <form method="#" action="#" className="mt-10">
+                        <form className="mt-10">
                                            
                             <div>
-                                <input type="email" placeholder="Enter your username" className="block w-full mt-1 bg-gray-100 border-none shadow-lg h-11 rounded-xl hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />
+                                <input type="email" placeholder="Enter your email" className="block w-full mt-1 bg-gray-100 border-none shadow-lg h-11 rounded-xl hover:bg-blue-100 focus:bg-blue-100 focus:ring-0 pl-4" required />
                             </div>
                 
                             <div className="mt-7">                
-                                <input type="password" placeholder="Enter your password" className="block w-full mt-1 bg-gray-100 border-none shadow-lg h-11 rounded-xl hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />                           
+                                <input type="password" placeholder="Enter your password" className="block w-full mt-1 bg-gray-100 border-none shadow-lg h-11 rounded-xl hover:bg-blue-100 focus:bg-blue-100 focus:ring-0 pl-4" required/>                           
                             </div>
 
                             <div className="flex mt-7">
@@ -68,9 +69,11 @@ const SignIn:React.FC<SignInProps> = (props:SignInProps) => {
                              <div className="mt-7">
                                 <div className="flex items-center justify-center">
                                     <label className="mr-2" >Are you new?</label>
-                                    <a href="/SignUp" className="text-blue-500 transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105">
+                                    <Link href='SignUp' >
+                                    <a className="text-blue-500 transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105">
                                     Create an account
                                     </a>
+                                    </Link>
                                 </div>
                             </div>
                         </form>

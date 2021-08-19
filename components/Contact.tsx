@@ -49,20 +49,20 @@ const Contact:React.FC<ContactProps> = () => {
                             </div>
                         </div>
     
-                        <form className="flex flex-col justify-center p-6">
+                        <form className="flex flex-col justify-center p-6" action='https://formspree.io/f/mleaowgv' method='POST'>
                             <div className="flex flex-col">
                                 <label  className="hidden">Full Name</label>
-                                <input type="name" name="name" id="name" placeholder="Full Name" className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" />
+                                <input type="name" name="name" id="name" placeholder="Full Name" className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" required/>
                             </div>
     
                             <div className="flex flex-col mt-2">
                                 <label  className="hidden">Email</label>
-                                <input type="email" name="email" id="email" placeholder="Email" className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" />
+                                <input type="email" name="email" id="email" placeholder="Email" className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" required/>
                             </div>
     
                             <div className="flex flex-col mt-2">
                                 <label  className="hidden">Number</label>
-                                <input type="tel" name="tel" id="tel" placeholder="Telephone Number" className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" />
+                                <input type="tel" name="tel" id="tel" placeholder="Telephone Number" className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" required/>
                             </div>
     
                             <button type="submit" className="px-6 py-3 mt-3 font-bold text-white transition duration-300 ease-in-out bg-indigo-600 rounded-lg md:w-32 hover:bg-blue-dark hover:bg-indigo-500">
