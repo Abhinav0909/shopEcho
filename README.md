@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# shopEcho
 
-## Getting Started
+The current pandemic has affected the education system all over the world. Everyone is learning remotely. It is still all right for the senior students but the junior students are the ones who need regular interaction and our current education system is not able to provide this to them. We created an AR-based website EduAR where students from any background can learn different reactions to organic chemistry and learn from it. Students can learn various concepts with the help of3D Models, which makes learning fun and effortless. It can help students achieve better results through visualization and full immersion in the subject matter. Interactive AR learning can have a significant positive impact on students. It keeps them engaged throughout the lesson We also created a chatbot and multi-language support in our website which makes it even more convenient for students to learn.
 
-First, run the development server:
+## Live demo
 
-```bash
-npm run dev
-# or
+The site is deployed through Vercel, which you can view from [here]()
+
+## 🚀 Main Features
+
+- Interactive 3D Models
+- Learn with Augmented Reality
+- Available in multiple languages
+- Learn with animation
+
+## 📃 Pages
+
+- Login/Register
+- Home page
+- Lab
+- Contact page
+
+## 💻 Tech Stack
+
+- Next
+- TypeScript
+- MongoDB
+- MailGun
+- i18next
+- bcrypt
+- json web token
+- dot
+- nanoid
+- Tailwind CSS & Framer Motion
+
+## Prerequisites
+
+Required to install and run the software:
+
+- [yarn](https://yarnpkg.com/)
+
+## Installing and Running
+
+From the project folder, run these commands in console (terminal) to install dependencies and run the app:
+
+```
+yarn
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🖼️ Some glimpse of the site
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+## 🐛 Bug Reporting
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Feel free to [open an issue](https://github.com/Abhinav0909/shopEcho/issues) on GitHub if you find any bug.
 
-## Learn More
+## ⭐ Feature Request
 
-To learn more about Next.js, take a look at the following resources:
+Feel free to [Open an issue](https://github.com/Abhinav0909/issues) on GitHub to request any additional features you might need for your use case.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📜 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This software is open source, licensed under the [MIT License](https://github.com/Abhinav0909/issues/blob/main/LICENSE).
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/Abhinav0909)
