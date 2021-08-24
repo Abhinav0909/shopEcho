@@ -4,11 +4,16 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import "../i18n"
 import database from "../common/database";
 import { GetStaticProps } from "next";
 import { motion } from "framer-motion";
-const Home = ({ data }:any) => {
+import { useRouter } from "next/dist/client/router";
+import en from '../locales/en.json'
+import hi from '../locales/hi.json';
+const Home = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en: hi;
   const fadeBottom = {
     hidden:{
     opacity:0,
@@ -53,7 +58,7 @@ visible:{
       <Navbar />
       <div className="">
         <Head>
-          <title>shopEcho</title>
+          <title>{t.shopEcho}</title>
           <meta name="description" />
         </Head>
           <motion.img
@@ -66,25 +71,18 @@ visible:{
           ></motion.img>
           <div className="">
             <motion.h1 className="w-full my-6 text-3xl font-bold text-center border-b-2 border-black md:w-11/12 md:mx-20 " variants={fadeBottom} initial='hidden'animate='visible'>
-              About Us
+             {t.title}
             </motion.h1>
             <motion.p className="my-10 text-xl font-medium text-justify mx-14 md:mx-28 " variants={fadeTop} initial='hidden'animate='visible'>
-              {data}
+              {t.description}
             </motion.p>
+    
           </div>
       </div>
+
       <Footer />
     </div>
   );
-}
-
-export const getStaticProps:GetStaticProps = async() => {
-  const data = (await (await database()).collection('aboutus').findOne({}))!.aboutus;
-  return{
-     props:{
-    data:data
-  }
-  }
 }
 
 export default Home;
