@@ -1,0 +1,20 @@
+{
+  "title": "About us",
+  "description": "The current pandemic has affected the education system all over the world .Everyone is learning remotely. It is still all right for the senior students but the junior students are the ones who need regular interaction and our current education system is notable to provide this to them..We created an AR-based website EduAR where students from anybackground can learn different reactions of organic chemistry andlearn from it.Students can learn various concepts with the help of3D Models, which makes learning fun and effortless. EduAR can helpstudents achieve better results through visualization and fullimmersion in the subject matter. Interactive AR learning can have significant positive impact on students. It keeps them engagedthroughout the lesson We also created a chatbot and multi-languagebsupport in our website which makes it even more convenient for students to learn.",
+  "Home":"Home",
+  "Lab":"Lab",
+  "SignIn":"Sign In",
+  "ContactUs":"Contact Us",
+  "shopEcho":"shopEcho",
+  "options":"Options",
+  "footer":"Made a little experiment with echoAr",
+  "span":"by Abhinav Karforma",
+  "Experiment":"Welcome to the Experiment Section",
+  "ContactUsHeadline":"Get in touch",
+  "ContactUsHeadlineP":"Fill in the form to start a conversation",
+  "Submit":"Submit",
+  "FullName":"Full Name",
+  "Email":"Email",
+  "Number":"Number",
+  "TelephoneNumber":"Telephone Number"
+}

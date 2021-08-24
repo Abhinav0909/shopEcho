@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unknown-property */
+import { useRouter } from "next/dist/client/router";
+import en from "../locales/en.json"
+import hi from "../locales/hi.json"
 import React from "react"
-export interface ContactProps {
-  fullName: string,
-  email: string;
-  message: string;
-}
-const Contact:React.FC<ContactProps> = () => {
+const Contact:React.FC = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'en' ? en: hi;
   return (
     <div className="relative flex justify-center min-h-screen bg-white items-top dark:bg-gray-900 sm:items-center sm:pt-0">
             <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
@@ -13,10 +14,10 @@ const Contact:React.FC<ContactProps> = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <div className="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
                             <h1 className="text-4xl font-extrabold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
-                                Get in touch
+                                {t.ContactUsHeadline}
                             </h1>
                             <p className="mt-2 text-lg font-medium text-gray-600 text-normal sm:text-2xl dark:text-gray-400">
-                                Fill in the form to start a conversation
+                                {t.ContactUsHeadlineP}
                             </p>
     
                             <div className="flex items-center mt-8 text-gray-600 dark:text-gray-400">
@@ -50,23 +51,14 @@ const Contact:React.FC<ContactProps> = () => {
                         </div>
     
                         <form className="flex flex-col justify-center p-6" action='https://formspree.io/f/mleaowgv' method='POST'>
-                            <div className="flex flex-col">
-                                <label  className="hidden">Full Name</label>
-                                <input type="name" name="name" id="name" placeholder="Full Name" className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" required/>
-                            </div>
-    
-                            <div className="flex flex-col mt-2">
-                                <label  className="hidden">Email</label>
-                                <input type="email" name="email" id="email" placeholder="Email" className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" required/>
-                            </div>
-    
-                            <div className="flex flex-col mt-2">
-                                <label  className="hidden">Number</label>
-                                <input type="tel" name="tel" id="tel" placeholder="Telephone Number" className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" required/>
-                            </div>
+                            
+                                <input type="name" name="name" id="name" placeholder={t.FullName} className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" required/>
+                                <input type="email" name="email" id="email" placeholder={t.Email} className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" required/>
+                                <label  className="hidden">{t.Number}</label>
+                                <input type="tel" name="tel" id="tel" placeholder={t.TelephoneNumber} className="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none" required/>
     
                             <button type="submit" className="px-6 py-3 mt-3 font-bold text-white transition duration-300 ease-in-out bg-indigo-600 rounded-lg md:w-32 hover:bg-blue-dark hover:bg-indigo-500">
-                                Submit
+                                {t.Submit}
                             </button>
                         </form>
                     </div>
