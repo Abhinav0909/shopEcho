@@ -16,5 +16,6 @@
   "FullName":"Full Name",
   "Email":"Email",
   "Number":"Number",
-  "TelephoneNumber":"Telephone Number"
+  "TelephoneNumber":"Telephone Number",
+  "SignOut":"SignOut"
 }
