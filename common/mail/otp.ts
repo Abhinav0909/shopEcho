@@ -6,5 +6,5 @@ import fs from 'fs';
 export default(email:string,otp:string):string => {
 const data = fs.readFileSync(path.join(process.cwd() , 'template','otp.html'),'utf-8');
 const template = doT.template(data);
-return template({email:email});
+return template({email:email,otp:otp});
 }
