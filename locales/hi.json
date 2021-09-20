@@ -16,5 +16,6 @@
   "FullName":"पूरा नाम",
   "Email":"ईमेल",
   "Number":"संख्या",
-  "TelephoneNumber":"टेलीफ़ोन का नंबर"
+  "TelephoneNumber":"टेलीफ़ोन का नंबर",
+  "SignOut":" साइनआउट"
 }
