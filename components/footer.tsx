@@ -6,9 +6,9 @@ const Footer: React.FC = () => {
   const { locale } = router;
   const t = locale === 'en' ? en: hi;
   return (
-    <div className='p-4 text-center text-white bg-black '>
+    <div className='p-4 text-center text-white bg-blue-400 font-mono'>
       <h1>{t.footer}
-        <span className='text-blue-700'> {t.span}</span>
+        <span className='text-purple-900'> {t.span}</span>
       </h1>
     </div>
   )
