@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/dist/client/router";
 import en from "../locales/en.json"
 import hi from '../locales/hi.json'
@@ -16,24 +16,55 @@ const Navbar: React.FC<NavBarProps> = () => {
   const [hamburger, setHamburger] = useState(false);
   const handleDropdown = () => setDropDown(!dropDown);
   const clickHandler = () => setHamburger(!hamburger);
-
+  const [loginStatus, setLoginStatus] = useState<boolean>(false);
+   const handleSignOut = () => {
+   localStorage.setItem('token','');
+   setLoginStatus(false);
+  }
+  useEffect(() => {
+    function checkLoginStatus() {
+      const accessToken = localStorage.getItem('token');
+      if(accessToken !== undefined && accessToken?.length !== 0){
+        setLoginStatus(true);
+        console.info(accessToken);
+    console.info(loginStatus)
+  }
+    }
+    checkLoginStatus()
+  }, [loginStatus])
   return (
-    <div className="fixed top-0  w-full">
-      <nav className="bg-indigo-900 bg-center bg-no-repeat bg-cover flex p-4 text-white my-auto">
+    <div className="fixed top-0  w-full ">
+      <nav className="bg-blue-400 bg-center bg-no-repeat bg-cover flex p-4 text-white my-auto text-center font-serif">
         <Link href="/">
-          <a className="text-xl font-semibold  ">{t.shopEcho}</a>
+          <a className="text-xl font-semibold ">{t.shopEcho}</a>
         </Link>
 
-        <div className="hidden mx-auto space-x-6 font-semibold font-size-xl lg:block">
+        <div className="hidden mx-auto space-x-4 font-semibold font-size-xl lg:block   ">
           <Link href="/">
             <a className="">{t.Home}</a>
           </Link>
+          {loginStatus ?
           <Link href="/Card">
             <a className="">{t.Lab}</a>
           </Link>
-          <Link href="/auth/SignIn">
-            <a className="">{t.SignIn}</a>
-          </Link>
+          :
+          <Link href="/Card">
+            <a className=""></a>
+          </Link>}
+          {loginStatus === true? 
+          <button className="" onClick={handleSignOut}>
+          {t.SignOut}
+          </button>            
+              :
+              <Link href="/auth/SignIn">
+                <a>
+              <button className="" >
+                {t.SignIn}
+              </button>
+              </a>
+              </Link>
+              }
+
           <Link href="/Contact">
             <a className="">{t.ContactUs}</a>
           </Link>
@@ -58,24 +89,42 @@ const Navbar: React.FC<NavBarProps> = () => {
           </button>
         </div>
         {hamburger ? (
-          <div className="flex flex-col my-auto w-full mt-10 lg:hidden  ">
+          <div className="flex flex-col  w-full mt-10 lg:hidden items-center mx-auto space-y-2  ">
             <Link href="/">
-              <a className="block px-4 py-2 text-base font-semibold text-center text-white border-blue-600">
+              <a className="">
                 {t.Home}
               </a>
             </Link>
+            {loginStatus ?
             <Link href="/Lab">
-              <a className="block px-4 py-2 text-base font-semibold text-center text-white border-white">
+              <a className="">
                {t.Lab}
               </a>
             </Link>
-            <Link href="/auth/SignIn">
-              <a className="block px-4 py-2 text-base font-semibold text-center text-white border-white">
-                {t.SignIn}
+            :
+            <Link href="/Lab">
+              <a className="">
+               
               </a>
-            </Link>
+            </Link>}
+            
+
+              {loginStatus === true?
+              <button className="" onClick={handleSignOut}>
+                {t.SignOut}
+                </button>
+              
+              :
+              <Link href="/auth/SignIn">
+                <a>
+              <button className="" >
+                {t.SignIn}
+              </button>
+              </a>
+                </Link>}
+            
             <Link href="/Contact">
-              <a className="block px-4 py-2 text-base font-semibold text-center text-white border-white">
+              <a className="">
                {t.ContactUs}
               </a>
             </Link>
@@ -99,7 +148,7 @@ const Navbar: React.FC<NavBarProps> = () => {
           </button>
           </div>
         {dropDown ? (
-            <select className="lg:flex lg:flex-col lg:my-auto lg:w-20 lg:mt-8 rounded-md bg-indigo-800 hidden absolute top-8 right-6 cursor-pointer " onChange={changeLanguages} defaultValue={locale}>
+            <select className="lg:flex lg:flex-col lg:my-auto lg:w-20 lg:mt-8 rounded-md bg-indigo-500 hidden absolute top-8 right-6 cursor-pointer " onChange={changeLanguages} defaultValue={locale}>
             <option className=" block px-4 py-1 text-base font-semibold text-center text-white border-white" value='en'>
               en
             </option>

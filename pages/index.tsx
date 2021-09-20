@@ -69,11 +69,11 @@ visible:{
             initial='hidden'
             animate='visible'
           ></motion.img>
-          <div className="">
-            <motion.h1 className="w-full my-6 text-3xl font-bold text-center border-b-2 border-black md:w-11/12 md:mx-20 " variants={fadeBottom} initial='hidden'animate='visible'>
+          <div className="bg-pink-50">
+            <motion.h1 className="w-full my-6 text-3xl font-bold text-center border-b-2 border-black md:w-11/12 md:mx-20 font-mono " variants={fadeBottom} initial='hidden'animate='visible'>
              {t.title}
             </motion.h1>
-            <motion.p className="my-10 text-xl font-medium text-justify mx-14 md:mx-28 " variants={fadeTop} initial='hidden'animate='visible'>
+            <motion.p className="my-10 text-xl font-medium text-justify mx-14 md:mx-28 font-serif " variants={fadeTop} initial='hidden'animate='visible'>
               {t.description}
             </motion.p>
     

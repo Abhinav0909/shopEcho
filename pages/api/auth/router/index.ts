@@ -36,7 +36,7 @@ const signUpHandler = async(req: NextApiRequest, res: NextApiResponse) => {
         message: 'Invalid http method',
       })
     }
-  } catch (e) {
+  } catch (e:any) {
     res.status(e.status || 500).json({
       message: e.message || 'Internal Server Occured',
     })
