@@ -24,7 +24,7 @@ export const otpGeneratorController = async(email:string) => {
         await mail(email,'OTP Request',otp(email,otpCreation));
         return 'Successful';
     }
-  } catch(err) {
+  } catch(err:any) {
     throw {
       message:err.message || 'An error occured'
     }

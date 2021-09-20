@@ -23,7 +23,7 @@ const verifyOtpHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         
       }
     }
-  } catch (err) {
+  } catch (err:any) {
     res.status(err.status || 500).json({
      message:err.status || "Internal error occured",
     })
