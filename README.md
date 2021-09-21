@@ -49,10 +49,10 @@ yarn dev
 ```
 
 ## 🖼️ Some glimpse of the site
-![screencapture-localhost-3000-2021-08-21-23_06_13](https://user-images.githubusercontent.com/71188751/130330481-09277382-7617-464c-8113-4f8a2f054007.png)  
-![screencapture-localhost-3000-Card-2021-08-21-23_07_36](https://user-images.githubusercontent.com/71188751/130330511-19ddaaea-c667-46e5-aa85-9fa6b333d5e3.png)  
+![screencapture-shop-echo-vercel-app-2021-09-21-16_40_01](https://user-images.githubusercontent.com/71188751/134160567-865f3213-82f6-4cde-a6eb-fbb4e9f3e7ee.png)
+![screencapture-shop-echo-vercel-app-card-2021-09-21-16_41_12](https://user-images.githubusercontent.com/71188751/134160705-0acf0435-f125-4232-8724-3772325728fc.png)
 ![screencapture-localhost-3000-Lab-2021-08-21-23_08_25](https://user-images.githubusercontent.com/71188751/130330541-3f816ca7-b7e3-45f0-960b-10f26dbd5bf6.png)  
-![screencapture-localhost-3000-auth-SignIn-2021-08-21-23_09_05](https://user-images.githubusercontent.com/71188751/130330551-6c01be84-00a7-47fe-83fa-1cd7e7c90628.png)  
+![screencapture-shop-echo-vercel-app-auth-signIn-2021-09-21-16_42_30](https://user-images.githubusercontent.com/71188751/134160940-8880b8a4-3505-4bcf-9d02-25da0902dfdf.png)
 ![screencapture-localhost-3000-Contact-2021-08-21-23_09_28](https://user-images.githubusercontent.com/71188751/130330568-8fe3bf6b-a7be-4b8e-9a90-2b401fdd3f21.png)  
 
 ## 🐛 Bug Reporting
