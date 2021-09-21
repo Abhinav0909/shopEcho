@@ -11,9 +11,9 @@ const Chemistrylab = ({data}:{data:{title:string,echoAr:string,QrCode:string,lin
           frameBorder="0"
           allowFullScreen
           allow="fullscreen; autoplay; vr"
-          execution-while-out-of-viewport
-          execution-while-not-rendered
-          web-share
+          execution-while-out-of-viewport="true"
+          execution-while-not-rendered="true"
+          web-share="true"
           src={data?.echoAr}
           className='w-full h-screen md:px-16 md:pb-16 md:pt-10  p-4 px-auto'
         ></iframe>
