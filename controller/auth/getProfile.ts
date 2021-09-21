@@ -1,4 +1,4 @@
-import { LoggerLevel, ObjectId } from 'mongodb';
+import { ObjectId } from 'mongodb';
 import database from "../../common/database";
 import * as jwt from 'jsonwebtoken';
 

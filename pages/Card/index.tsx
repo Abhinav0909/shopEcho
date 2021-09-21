@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import React from "react";
 import database from "../../common/database";
-import Card from "../../components/Card";
+import Card from "../../components/card";
 import en from '../../locales/en.json'
 import hi from '../../locales/hi.json'
 import { useRouter } from "next/dist/client/router";

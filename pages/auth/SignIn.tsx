@@ -1,7 +1,6 @@
-import SignIn from "../../components/SignIn"
+import SignIn from "../../components/signIn"
 import Head from "next/head"
 import React from "react"
-import SignUp from "../../components/SignUp"
 export interface AuthProps{}
 const SignInAuth:React.FC<AuthProps> = () => {
   return (

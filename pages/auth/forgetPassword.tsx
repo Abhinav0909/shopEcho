@@ -1,10 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Head from "next/head"
 import React,{ useState } from "react";
-import  Otp from '../../components/Otp'
-import verifyOtp from "../../components/verifyOtp";
+import  Otp from '../../components/otp'
 const forgetPassword = () =>{
-    const [otpState, setOtpState] = useState<boolean>(false);
     return <div>
     <Head>
         <title>Forget Password</title>
@@ -13,4 +11,5 @@ const forgetPassword = () =>{
    </div>
 }
 
+//changed the name
 export default forgetPassword

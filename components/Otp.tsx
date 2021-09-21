@@ -11,7 +11,7 @@ const Otp = () => {
     e.preventDefault();
     try{
     const data = { email: email};
-    const res = await axios.post("http://localhost:3000/api/otp/router/otpGenerator",data,{
+    const res = await axios.post("api/otp/router/otpGenerator",data,{
          headers:{
              'Content-Type':'application/json',
          }

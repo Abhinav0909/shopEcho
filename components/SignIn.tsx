@@ -2,32 +2,29 @@ import axios from "axios";
 import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import React, { useState } from "react";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
 const SignIn = () => {
   const router = useRouter();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const handleSubmit = async(e: React.FormEvent<EventTarget>) => {
+  const handleSubmit = async (e: React.FormEvent<EventTarget>) => {
     e.preventDefault();
-    try{
-    const data = { email: email, password: password };
-    const res = await axios.post("http://localhost:3000/api/auth/router/login",data,{
-         headers:{
-             'Content-Type':'application/json',
-         }
-        })
-      localStorage.setItem('token',res.data.token);
-      const accessToken = localStorage.getItem('token');
-     if(res.status === 200 && accessToken){
-      alert('Login Successful');
-       router.push('/');
-     }
-    }catch{
-      alert('Invalid  Email or Password');
+    try {
+      const data = { email: email, password: password };
+      const res = await axios.post(`/api/auth/router/login`, data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      localStorage.setItem("token", res.data.token);
+      const accessToken = localStorage.getItem("token");
+      if (res.status === 200 && accessToken) {
+        alert("Login Successful");
+        router.push("/");
+      }
+    } catch {
+      alert("Invalid  Email or Password");
     }
-
-  }
+  };
   return (
     <div className="font-sans">
       <div className="relative flex flex-col items-center min-h-screen bg-gray-100 sm:justify-center ">
@@ -74,14 +71,12 @@ const SignIn = () => {
                     Remember Me
                   </span>
                 </label>
-              
+
                 <div className="w-full text-right">
                   <Link href="forgetPassword">
-                  <a
-                    className="text-sm text-gray-600 underline hover:text-gray-900"
-                  >
-                    Forgot Password
-                  </a>
+                    <a className="text-sm text-gray-600 underline hover:text-gray-900">
+                      Forgot Password
+                    </a>
                   </Link>
                 </div>
               </div>
@@ -101,7 +96,7 @@ const SignIn = () => {
               <div className="mt-7">
                 <div className="flex items-center justify-center">
                   <label className="mr-2">Are you new?</label>
-                  <Link href="SignUp">
+                  <Link href="signUp">
                     <a className="text-blue-500 transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105">
                       Create an account
                     </a>
