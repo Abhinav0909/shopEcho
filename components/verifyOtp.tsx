@@ -71,6 +71,7 @@ const VerifyOtp: React.FC<any> = () => {
                 <button
                   type="submit"
                   className="w-full py-3 text-white transition duration-500 ease-in-out transform bg-blue-500 shadow-xl rounded-xl hover:shadow-inner focus:outline-none hover:-translate-x hover:scale-105"
+                aria-label="Verify Otp"
                 >
                 Verify Otp
                 </button>
