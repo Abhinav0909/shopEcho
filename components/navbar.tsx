@@ -44,11 +44,11 @@ const Navbar: React.FC<NavBarProps> = () => {
             <a className="">{t.Home}</a>
           </Link>
           {loginStatus ?
-          <Link href="/Card">
+          <Link href="/card">
             <a className="">{t.Lab}</a>
           </Link>
           :
-          <Link href="/Card">
+          <Link href="/card">
             <a className=""></a>
           </Link>}
           {loginStatus === true? 
@@ -56,7 +56,7 @@ const Navbar: React.FC<NavBarProps> = () => {
           {t.SignOut}
           </button>            
               :
-              <Link href="/auth/SignIn">
+              <Link href="/auth/signIn">
                 <a>
               <button className="" >
                 {t.SignIn}
@@ -65,7 +65,7 @@ const Navbar: React.FC<NavBarProps> = () => {
               </Link>
               }
 
-          <Link href="/Contact">
+          <Link href="/contact">
             <a className="">{t.ContactUs}</a>
           </Link>
         </div>
@@ -96,13 +96,13 @@ const Navbar: React.FC<NavBarProps> = () => {
               </a>
             </Link>
             {loginStatus ?
-            <Link href="/Lab">
+            <Link href="/lab">
               <a className="">
                {t.Lab}
               </a>
             </Link>
             :
-            <Link href="/Lab">
+            <Link href="/lab">
               <a className="">
                
               </a>
@@ -115,7 +115,7 @@ const Navbar: React.FC<NavBarProps> = () => {
                 </button>
               
               :
-              <Link href="/auth/SignIn">
+              <Link href="/auth/signIn">
                 <a>
               <button className="" >
                 {t.SignIn}
@@ -123,7 +123,7 @@ const Navbar: React.FC<NavBarProps> = () => {
               </a>
                 </Link>}
             
-            <Link href="/Contact">
+            <Link href="/contact">
               <a className="">
                {t.ContactUs}
               </a>

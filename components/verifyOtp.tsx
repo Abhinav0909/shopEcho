@@ -10,7 +10,7 @@ const VerifyOtp: React.FC<any> = () => {
     e.preventDefault();
     try{
     const data = { email:email,otp:otp,newPassword:newPassword};
-    const res = await axios.post("http://localhost:3000/api/otp/router/otpVerification",data,{
+    const res = await axios.post("api/otp/router/otpVerification",data,{
          headers:{
              'Content-Type':'application/json',
          }

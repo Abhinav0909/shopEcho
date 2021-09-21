@@ -1,4 +1,4 @@
-import SignUp from "../../components/SignUp"
+import SignUp from "../../components/signUp"
 import Head from "next/head"
 import React from "react"
 export interface AuthProps{}

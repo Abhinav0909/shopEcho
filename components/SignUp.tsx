@@ -2,9 +2,8 @@ import axios from "axios";
 import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import React, { useState } from "react";
-import SignIn from "./SignIn";
+import SignIn from "./signIn"
 const SignUp: React.FC = () => {
-  const router = useRouter();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
@@ -14,7 +13,7 @@ const SignUp: React.FC = () => {
     try{
     const data = { email: email, password: password, confirmPassword:confirmPassword };
     const res = await axios.post(
-      "http://localhost:3000/api/auth/router/",
+      "/api/auth/router/",
       data,
       {
         headers: {
@@ -86,7 +85,7 @@ if(status === false){
                   </span>
                 </label>
                 <div className="w-full text-right">
-                  <Link href="SignIn">
+                  <Link href="signIn">
                     <a className="text-sm text-gray-600 underline hover:text-gray-900">
                       Sign In
                     </a>
