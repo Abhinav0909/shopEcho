@@ -4,7 +4,7 @@ The current pandemic has affected the education system all over the world. Every
 
 ## Live demo
 
-The site is deployed through Vercel, which you can view from [here]()
+The site is deployed through Vercel, which you can view from [here](https://shop-echo.vercel.app/)
 
 ## 🚀 Main Features
 
