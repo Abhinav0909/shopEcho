@@ -95,11 +95,11 @@ const Navbar: React.FC<NavBarProps> = () => {
               <a className="">{t.Home}</a>
             </Link>
             {loginStatus ? (
-              <Link href="/lab">
+              <Link href="/card">
                 <a className="">{t.Lab}</a>
               </Link>
             ) : (
-              <Link href="/lab">
+              <Link href="/card">
                 <a className=""></a>
               </Link>
             )}
