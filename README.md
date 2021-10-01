@@ -32,6 +32,7 @@ The site is deployed through Vercel, which you can view from [here](https://shop
 - dot
 - nanoid
 - Tailwind CSS & Framer Motion
+- echoAr
 
 ## Prerequisites
 
